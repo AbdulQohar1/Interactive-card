@@ -12,6 +12,10 @@ body{
   padding: 30px;
 }
 
+.review-page {
+  display: block;
+}
+
 .star{
   background-color: rgb(37,46,55);
   padding: 25px;
@@ -34,7 +38,7 @@ body{
   display: flex;
   gap: 15px;
 }
-
+  
 .rate-star{
   background-color: rgb(38,47,56);
   padding: 15px 20px;
@@ -65,11 +69,18 @@ body{
   cursor: pointer;
 }
 
+.submitBtn:hover{
+  background-color: #fff;
+  color:rgb(252,118,19) ;
+}
+
 .feedback{
-  display: none;
+  
   width: 35%;
   text-align: center;
 }
+
+
 
 .thankyou-img{
   font-size: 18px;
@@ -92,4 +103,8 @@ body{
   font-size: 15px;
   padding: 0 6px;
   opacity: 0.6;
+}
+
+.hidden{
+  display: none;
 }
