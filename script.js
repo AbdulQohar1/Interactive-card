@@ -5,21 +5,56 @@
 // add event listener to the submit btn
 // Submit btn backgroundColour changes to white and the color to yellow
 // The class "review-page" gets a display of none && the thankYou page gets a display of block.
-// 
+// select and declare the rating message
+// select and declare the uer-review class
+// add an event listner to it
+// write a function that select user-review's content and dump it in the thank you message.
+// call the rating function
+// reference/call it in the submitbutton code block
 
 let submitBtn = document.querySelector('.submitBtn');
 let rateStar = document.querySelector('.rate-star');
 let message = document.querySelector('.rating-message');
-let reviewPage = document.querySelector('.review-page');
 const feedbackPage = document.querySelector('.feedback');
+let reviewPage = document.querySelector('.review-page');
+let userReview = document.querySelector('user-review');
+
+let rating = function () {
+  message.textContent = `You selected ${userRating.textContent} of 5`;
+}
+
+
 
 submitBtn.addEventListener('click' , function() {
-  // submitBtn.style.backgroundColor = "#fff";
-  // submitBtn.style.color = "rgb(252,118,19)"
+  // userReview.addEventListener('click', rating
+  // });
+
   reviewPage.classList.add("hidden");
   feedbackPage.classList.remove("hidden");
-
+  rating();
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
