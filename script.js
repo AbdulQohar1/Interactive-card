@@ -39,12 +39,10 @@ userReview.forEach(function(link) {
     // Adding the class to element and extract the value
     link.classList.add("active");
     rating(clickedElementId[11]);
-    
   });
 });
 
 submitBtn.addEventListener('click' , function() {
-
   reviewPage.classList.add("hidden");
   feedbackPage.classList.remove("hidden");
 });
