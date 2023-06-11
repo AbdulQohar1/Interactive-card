@@ -19,19 +19,25 @@ const feedbackPage = document.querySelector('.feedback');
 let reviewPage = document.querySelector('.review-page');
 let userReview = document.querySelector('user-review');
 
+
 let rating = function () {
-  message.textContent = `You selected ${userRating.textContent} of 5`;
-}
+  var message = `You selected ${rateStar.textContent} of 5`;
+  console.log(message);
+  message = message.textContent;
+};
+
+
+
 
 
 
 submitBtn.addEventListener('click' , function() {
-  // userReview.addEventListener('click', rating
-  // });
+  rating();
+  rateStar.addEventListener('click', rating);
 
   reviewPage.classList.add("hidden");
   feedbackPage.classList.remove("hidden");
-  rating();
+  // rating();
 });
 
 
