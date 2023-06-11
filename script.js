@@ -20,7 +20,6 @@ let reviewPage = document.querySelector('.review-page');
 let userReview = document.querySelectorAll('.user-review');
 let toggleElement = document.querySelectorAll('.toggle');
 
-<<<<<<< HEAD
 
 let rating = function () {
   var message = `You selected ${rateStar.textContent} of 5`;
@@ -30,11 +29,6 @@ let rating = function () {
 
 
 
-=======
-let rating = function (rating) {
-  message.textContent = `You selected ${rating} of 5`;
-}
->>>>>>> e0881a1cadde59e3af9bbf4b7642c50af14010ce
 
 userReview.forEach(function(link) {
   link.addEventListener("click", function(event) {
@@ -55,17 +49,12 @@ userReview.forEach(function(link) {
 });
 
 submitBtn.addEventListener('click' , function() {
-<<<<<<< HEAD
   rating();
   rateStar.addEventListener('click', rating);
 
   reviewPage.classList.add("hidden");
   feedbackPage.classList.remove("hidden");
   // rating();
-=======
-  reviewPage.classList.add("hidden");
-  feedbackPage.classList.remove("hidden");
->>>>>>> e0881a1cadde59e3af9bbf4b7642c50af14010ce
 });
 
 
