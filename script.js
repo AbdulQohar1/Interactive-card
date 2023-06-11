@@ -17,21 +17,34 @@ let rateStar = document.querySelector('.rate-star');
 let message = document.querySelector('.rating-message');
 const feedbackPage = document.querySelector('.feedback');
 let reviewPage = document.querySelector('.review-page');
-let userReview = document.querySelector('user-review');
+let userReview = document.querySelectorAll('.user-review');
+let toggleElement = document.querySelectorAll('.toggle');
 
-let rating = function () {
-  message.textContent = `You selected ${userRating.textContent} of 5`;
+let rating = function (rating) {
+  message.textContent = `You selected ${rating} of 5`;
 }
 
+userReview.forEach(function(link) {
+  link.addEventListener("click", function(event) {
+    
+    event.preventDefault();
+    var clickedElement = event.target;
+    var clickedElementId = clickedElement.id;
 
+      // Deselect all rate stars
+      userReview.forEach(function(star) {
+        star.classList.remove('active');
+      });
+
+    // Adding the class to element and extract the value
+    link.classList.add("active");
+    rating(clickedElementId[11]);
+  });
+});
 
 submitBtn.addEventListener('click' , function() {
-  // userReview.addEventListener('click', rating
-  // });
-
   reviewPage.classList.add("hidden");
   feedbackPage.classList.remove("hidden");
-  rating();
 });
 
 
